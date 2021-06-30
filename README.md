@@ -2,7 +2,7 @@
 
 Built using JS, HTML/CSS, and some elements from HTML5UP.
 
-<a href = "https://www.arthursolwayne.com">arthursolwayne.com</a> (redirects to next link)
+<a href = "https://arthursolwayne.com">arthursolwayne.com</a> (redirects to next link)
 
 or
 
