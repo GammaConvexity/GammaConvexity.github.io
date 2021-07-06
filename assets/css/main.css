@@ -5,7 +5,6 @@
 	Arthur Wayne and some elements from html5up.net
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -23,6 +22,16 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
+
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.fade-in {
+	animation: fadeIn ease 1.25s;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2572,7 +2581,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2687,10 +2696,14 @@ input, select, textarea {
 				.tiles article > a h2 {
 					margin: 0;
 					letter-spacing: .1em;
-					-moz-transform: translateY(7.5em);
-					-webkit-transform: translateY(7.5em);
-					-ms-transform: translateY(7.5em);
-					transform: translateY(7.5em);
+					-moz-transform: translateY(6.75em);
+					-webkit-transform: translateY(6.75em);
+					-ms-transform: translateY(6.75em);
+					transform: translateY(6.75em);
+				}
+
+				.tiles article > a p{
+					margin-top: -1em;
 				}
 
 				.tiles article > a .content {
@@ -2832,20 +2845,31 @@ input, select, textarea {
 
 /* Header */
 	.header {
+		-moz-transition: opacity 1s ease;
+		-webkit-transition: opacity 1s ease;
+		-ms-transition: opacity 1s ease;
+		transition: opacity 1s ease;
+		opacity: 1;
 		background-image: url("wood.png");
 		margin-bottom:  5vh;
+      	padding: .5em 0 0px 0em;
 	}
 		.header .head-text{
-			color:  white;
+			left: 30%;
+			margin-top: 3em;
 			position: absolute;
+			width: 31vw;
+			color: #f6f6f6;
 			text-align: center;
-			width: 30vw;
-			left: 25%;
-			margin-top: 3.5em;
 		}
 
 			.header .head-text h1 {
 				letter-spacing: 0.01em;
+			}
+
+			.header .head-text p {
+				margin-top: -2em;
+				padding-bottom: 1em;
 			}
 
 			.header .head-text #image {
@@ -2856,28 +2880,29 @@ input, select, textarea {
 					width: 8em;
 					position: absolute;
 					left: 0%;
-					top: -25%;
+					margin-top: -3em;
 				}
 
 		.header .img-wrap {
-			transition: 0.5s ease;
+			padding: 1em 0 0 0;
+			justify-content: center;
 		}
 
 			.header .img-wrap img {
-				padding-top: 1em;
+				transition: 0.5s ease;
 				position:  relative;
-				right: -55%;
-				width:  17.5em;
+				right: -60%;
+				width:  13em;
 				display: block;
 			}
 		
-		.header .img-wrap:hover {
-			transition: 0.5s ease;
-			-moz-transform: translateX(1.5em);
-			-webkit-transform: translateX(1.5em);
-			-ms-transform: translateX(1.5em);
-			transform: translateX(1.5em);
-		}
+				.header .img-wrap img:hover {
+					transition: 0.5s ease;
+					-moz-transform: translateX(1.5em);
+					-webkit-transform: translateX(1.5em);
+					-ms-transform: translateX(1.5em);
+					transform: translateX(1.5em);
+				}
 
 	#header {
 		/*padding: 8em 0 0.1em 0 ;*/
@@ -3202,13 +3227,13 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		padding: 0em 0 6em 0 ;
+		padding: 0em 0 53px 0 ;
 	}
 
 		@media screen and (max-width: 736px) {
 
 			#main {
-				padding: 0em 0 4em 0 ;
+				padding: 0em 0 20px 0 ;
 			}
 
 		}
@@ -3216,8 +3241,8 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background-color: #f6f6f6;
 		text-align: center;
+		color: #585858;
 	}
 
 		#footer > .inner {
@@ -3368,13 +3393,59 @@ input, select, textarea {
 		width: 100%;
 		max-width: 68em;
 		margin: 0 auto;
-		padding: 0 2.5em;
+		padding: 0 5em;
 	}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 980px) {
 
 			#wrapper > * > .inner {
 				padding: 0 1.25em;
+			}
+
+			.header .img-wrap {
+				padding:  4em 0 0 0;
+			}
+			
+			.header .head-text{
+				left: 30%;
+				margin-top: 3em;
+			}
+			.header .head-text #image img{
+				left: -3em;
+			}
+
+		}
+		@media screen and (max-width: 887px) {
+
+			.header .head-text{
+				left: 25%;
+				width: 39vw;
+				margin-top: 3em;
+			}
+
+		}
+		@media screen and (max-width: 572px) {
+			.tiles article > a h2{
+				margin-top: -3em;
+			}
+			.tiles article > a p{
+				display: none;
+			}
+			.header .img-wrap{
+				padding: 12em 0 0em 0;
+			}
+			.header .img-wrap img{
+				display: block;
+				right: -22.5%;
+			}
+
+			.header .head-text{
+				left: 10%;
+				width: 80vw;
+				margin-top: 3em;
+			}
+			.header .head-text #image img{
+				left: -2em;
 			}
 
 		}
